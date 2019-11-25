@@ -1,12 +1,14 @@
 import React from 'react';
 import './MainContent.scss';
+import { Route } from "react-router-dom";
+import Comands from "./comand/Comands";
 
 const MainContent = () => {
+  let ComandsPage  = ( () => <Comands />);
     return (
       <div className="MainContent">
-        <h2>Страница выбора команд</h2>
-        {/* <Route exact path='/'  render={ ProfileComponent }/>
-        <Route path='/profile' render={ ProfileComponent }/>
+        <Route exact path='/'  render={ ComandsPage }/>
+        {/* <Route path='/profile' render={ ProfileComponent }/>
         <Route path='/dialog'  render={ DialogComponent }/>
         <Route path='/news'    component={ News }/> */}
       </div>
