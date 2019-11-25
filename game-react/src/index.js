@@ -3,9 +3,20 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from "react-router-dom";
 import App from './App';
 import './index.css';
+import store from "./redux/stor";
 
-ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,document.getElementById('root')
-);
+// ---- Render component App -----------------------------
+let renderMyTree = (state) => {
+  ReactDOM.render(
+    <BrowserRouter>
+      <App state={store.getState()} />
+    </BrowserRouter>,document.getElementById('root')
+  );
+}
+
+renderMyTree(store.getState());
+
+store.subscribe( () => {
+  let state = store.getState();
+  renderMyTree(state);
+});

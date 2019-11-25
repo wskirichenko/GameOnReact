@@ -1,32 +1,18 @@
 import React from 'react';
 import './Comands.scss';
+import ComandComp from './comand/ComandComp';
 
-const Comands = () => {
+const Comands = (props) => {
+
+  let comandsElem = props.comands.map(
+    (com) =><ComandComp id={com.id} name={com.name} time={com.time} color={com.color} key={com.id} />
+  );
     return (
       <div className="Comands">
         <h2>Страница выбора команд</h2>
         <div className="Comands__main">
-          <div className="comand">
-            <p>Введите название Ваше команды:</p>
-            <input></input>
-            <label></label>
-            <div className="row">
-              <button className="button back">Редактировать</button>
-              <button className="button akcept">Принять</button>
-            </div>
-          </div>
-
-          <div className="comand">
-            <p>Введите название Ваше команды:</p>
-            <input></input>
-            <label></label>
-            <div className="row">
-              <button className="button back">Редактировать</button>
-              <button className="button akcept">Принять</button>
-            </div>
-          </div>
+          { comandsElem }
         </div>
-
       </div>
     );
 }

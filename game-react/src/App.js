@@ -3,11 +3,11 @@ import './App.scss';
 import Meny from './meny/Meny';
 import MainContent from './main/MainContent';
 
-const App = () => {
+const App = (props) => {
   return (
     <div className="App">
         <Meny />
-        <MainContent />
+        <MainContent state={props.state}/>
     </div>
   );
 }

@@ -3,8 +3,9 @@ import './MainContent.scss';
 import { Route } from "react-router-dom";
 import Comands from "./comand/Comands";
 
-const MainContent = () => {
-  let ComandsPage  = ( () => <Comands />);
+const MainContent = (props) => {
+
+  let ComandsPage  = ( () => <Comands comands={props.state.Comands} />);
     return (
       <div className="MainContent">
         <Route exact path='/'  render={ ComandsPage }/>
