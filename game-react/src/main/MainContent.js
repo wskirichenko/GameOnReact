@@ -4,8 +4,8 @@ import { Route } from "react-router-dom";
 import Comands from "./comand/Comands";
 
 const MainContent = (props) => {
-
-  let ComandsPage  = ( () => <Comands comands={props.state.Comands} />);
+// console.log(props);
+  let ComandsPage  = ( () => <Comands comands={props.store.getState()} store={props.store}/>);
     return (
       <div className="MainContent">
         <Route exact path='/'  render={ ComandsPage }/>

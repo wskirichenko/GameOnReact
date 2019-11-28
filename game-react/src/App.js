@@ -7,7 +7,7 @@ const App = (props) => {
   return (
     <div className="App">
         <Meny />
-        <MainContent state={props.state}/>
+        <MainContent store={props.store} />
     </div>
   );
 }
