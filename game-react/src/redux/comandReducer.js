@@ -42,6 +42,7 @@ const comandReducer = (state = inintialStste, action) => {
 export const addPostActionCreater = () => ( {type: ADD_COMAND} ); // Запись => ( { ... } ) вместо return
 
 export const updateNameComandCreator = (text) => {
+
   return {
     type: UPDATE_NAME_COMAND,
     newName: text

@@ -1,6 +1,8 @@
 import React from 'react';
 import './Comands.scss';
 import ComandComp from './comand/ComandComp';
+import { NavLink } from "react-router-dom";
+
 
 const Comands = (props) => {
 
@@ -10,9 +12,14 @@ const Comands = (props) => {
     return (
       <div className="Comands">
         <h2>Страница выбора команд</h2>
+
         <div className="Comands__main">
           { comandsElem }
         </div>
+
+        <button className="button akcept">
+          <NavLink className="nav" to="/tems">Далее</NavLink>
+        </button>
       </div>
     );
 }

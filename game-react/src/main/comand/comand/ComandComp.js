@@ -5,10 +5,6 @@ const ComandComp = (props) => {
   console.log("props=",props);
 	let fromTextInput = React.createRef();
 
-  // let onPostChange = (text) => {
-	// 	let action = updateNameComandCreator(text);
-	// 	props.store.dispatch(action);
-	// }
 	let onPostChange = () => {
 		let text = fromTextInput.current.value;
 		props.store.updateNameComand(text, props.id-1);

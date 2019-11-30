@@ -1,0 +1,22 @@
+.Tems {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+    border: 2px solid rgb(13, 112, 0);
+    border-radius: 10px;
+    background-color: rgb(173, 243, 255);
+    overflow: scroll;
+    padding: 20px;
+  }
+}
